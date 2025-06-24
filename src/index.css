@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --charcoal-color: #101820FF;
+  --yellow-color: #FEE715FF;
+  --cyan-color: #64FEDB;
+  --font-family: 'Roboto Slab', serif;
+  --font-family-pop: 'Poppins', serif;
+  --font-family-raleway: "Raleway", sans-serif;
+  --font-family-pt-serif: "PT Serif", serif;
+  --bg-color: #0B192E;
+  --text-color: #90a4ae;
+  --green-color: #43a047;
+  --white-color: #fff;
+
+  --primary-color: #fff;
+  --primary-text: #000;
+  --secondary-text: #B0B0B0;
+  --border-color: #eee;
+  --accent-color: #888888;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--primary-text);
+  background-color: var(--primary-color);
+}
+
+::selection {
+  background: var(--cyan-color); 
+  color: #000;         
+}
+
