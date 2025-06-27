@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import CalendarHeatmap from 'react-calendar-heatmap';
+// import CalendarHeatmap from 'react-calendar-heatmap';
 import 'react-calendar-heatmap/dist/styles.css';
 import ClearIcon from '@mui/icons-material/Clear';
 import BlogComponent from "../components/BlogComponent";
@@ -9,13 +9,15 @@ import styles from "../styles/blog.module.css";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 
+import logo from '../assests/my-logo.png';
+
 import blogs from "../blogsInfo";
 
 const Blog = () => {
     const [blogTags, setBlogTags] = useState([]);
     const [activeTags, setActiveTags] = useState([]);
     const [absoluteFilterOn, setAbsoluteFilterOn] = useState(false);
-    const [dateHeatMap, setDateHeatMap] = useState([]);
+    // const [dateHeatMap, setDateHeatMap] = useState([]);
     const [selectedDate, setSelectedDate] = useState(null);
     const [currentBlogs, setCurrentBlogs] = useState(blogs);
     const [showMoreStatus, setShowMoreStatus] = useState(false);
@@ -29,16 +31,16 @@ const Blog = () => {
         }
     }, [showMoreStatus]);
 
-    useEffect(() => {
-        const dateCounts = blogs.reduce((acc, blog) => {
-            acc[blog.date] = (acc[blog.date] || 0) + 1;
-            return acc;
-        }, {});
+    // useEffect(() => {
+    //     const dateCounts = blogs.reduce((acc, blog) => {
+    //         acc[blog.date] = (acc[blog.date] || 0) + 1;
+    //         return acc;
+    //     }, {});
     
-        const result = Object.entries(dateCounts).map(([date, count]) => ({ date, count }));
+    //     const result = Object.entries(dateCounts).map(([date, count]) => ({ date, count }));
 
-        setDateHeatMap(result);
-    }, []);
+    //     setDateHeatMap(result);
+    // }, []);
 
     useEffect(() => {
         if (selectedDate) {
@@ -68,11 +70,12 @@ const Blog = () => {
         <div className={styles["blog-wrapper"]}>
             <div className={styles["blog-main"]}>
                 <button className={styles["home-btn"]} aria-label="navigate to home">
-                    <a href="https://sambasiva.vercel.app" target="_blank" rel="noreferrer">
+                    <img src={logo} alt="author"/>
+                    <a href="https://sambasiva.vercel.app" target="_blank" rel="noreferrer" className={styles['portfolio-link']}>
                         Visit My Profile
                     </a>
                 </button>
-                <div className={styles['heatmap']}>
+                {/* <div className={styles['heatmap']}>
                     <CalendarHeatmap
                         startDate={new Date('2025-01-01')}
                         endDate={new Date('2025-12-31')}
@@ -89,7 +92,7 @@ const Blog = () => {
                             return styles[`color-scale-${value.count}`];
                         }}
                     />
-                </div>
+                </div> */}
                 <label className={styles['filtering-option']}>
                     <input type="checkbox" aria-label="strict filter" onChange={() => {
                         setAbsoluteFilterOn(!absoluteFilterOn)

@@ -17,6 +17,8 @@
     "react-markdown": "^10.1.0",
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
+    "react-spinners": "^0.17.0",
+    "react-syntax-highlighter": "^15.6.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

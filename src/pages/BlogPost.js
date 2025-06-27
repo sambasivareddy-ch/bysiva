@@ -3,6 +3,9 @@ import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
 
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { BarLoader } from "react-spinners";
+
 import blogs from "../blogsInfo";
 import styles from "../styles/blog.module.css";
 
@@ -22,12 +25,16 @@ const BlogPost = () => {
     }, [slug]);
 
     if (!content) {
-        return <div className={styles["blog-not-found"]}>Loading....</div>;
+        return <div className={styles["blog-loading"]}>
+            <BarLoader/>
+        </div>;
     }
     
     return (
         <div className={styles["blog-post-wrapper"]}>
-            <Link to={'/blog'}>/ Blogs</Link>
+            <Link to={'/blog'}>
+                <ArrowBackIcon/>
+            </Link>
             <ReactMarkdown>
                 {content}
             </ReactMarkdown>
