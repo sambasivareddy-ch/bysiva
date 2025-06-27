@@ -6,6 +6,9 @@ import ClearIcon from '@mui/icons-material/Clear';
 import BlogComponent from "../components/BlogComponent";
 import styles from "../styles/blog.module.css";
 
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+
 import blogs from "../blogsInfo";
 
 const Blog = () => {
@@ -15,6 +18,16 @@ const Blog = () => {
     const [dateHeatMap, setDateHeatMap] = useState([]);
     const [selectedDate, setSelectedDate] = useState(null);
     const [currentBlogs, setCurrentBlogs] = useState(blogs);
+    const [showMoreStatus, setShowMoreStatus] = useState(false);
+    const [blogWrapperClass, setBlogWrapperClass] = useState(styles['blog-tags']);
+
+    useEffect(() => {
+        if (!showMoreStatus) {
+            setBlogWrapperClass(styles['blog-tags']);
+        } else {
+            setBlogWrapperClass(styles['blog-tags_more'])
+        }
+    }, [showMoreStatus]);
 
     useEffect(() => {
         const dateCounts = blogs.reduce((acc, blog) => {
@@ -38,6 +51,7 @@ const Blog = () => {
 
     useEffect(() => {
         // Initialize blogTags with all unique tags from blogs
+        // const initialTags = Array.from(new Set(currentBlogs.flatMap(blog => blog.domains)));
         const initialTags = Array.from(new Set(currentBlogs.flatMap(blog => blog.domains)));
         setBlogTags(initialTags);
     }, [currentBlogs]);
@@ -76,14 +90,14 @@ const Blog = () => {
                         }}
                     />
                 </div>
+                <label className={styles['filtering-option']}>
+                    <input type="checkbox" aria-label="strict filter" onChange={() => {
+                        setAbsoluteFilterOn(!absoluteFilterOn)
+                    }}/>
+                    Match All Tags (Default: Match Any Tag)
+                </label>
                 <div className={styles['blog-header']}>
-                    <label className={styles['filtering-option']}>
-                        <input type="checkbox" aria-label="strict filter" onChange={() => {
-                            setAbsoluteFilterOn(!absoluteFilterOn)
-                        }}/>
-                        Match All Tags (Default: Match Any Tag)
-                    </label>
-                    <div className={styles['blog-tags']}>
+                    <div className={blogWrapperClass}>
                         {blogTags.map((tag) => (
                             <button
                                 key={tag}
@@ -117,6 +131,15 @@ const Blog = () => {
                             </button>
                         )}
                     </div>
+                    <button
+                        className={styles["show-more_tag_btn"]}
+                        onClick={() => {
+                            setShowMoreStatus(!showMoreStatus);
+                        }}
+                        aria-label={`show more tags`}
+                    >
+                        {!showMoreStatus ? <ExpandMoreIcon/> : <ExpandLessIcon/>}
+                    </button>
                 </div>
                 <div className={styles["blogs"]}>
                     {currentBlogs.map((blog) => {
