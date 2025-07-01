@@ -146,6 +146,7 @@
     height: fit-content;
     margin: 20px 0 10px;
     justify-content: flex-end;
+    align-items: flex-start;
 }
 
 .blog-comp__domains span {

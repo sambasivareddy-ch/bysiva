@@ -1,5 +1,14 @@
 const blogs = [
     {
+        'id': 'system-design-03',
+        'slug': 'system-design-03',
+        'title': '03: System Design - Scalability',
+        'description': 'Third post in the system design series, focusing on scalability techniques.',
+        'date': '2025-07-01',
+        'domains': ['system-design'],
+        'filename': 'system-design-03.md',
+    },
+    {
         'id': 'cp-06',
         'slug': 'cp-06',
         'title': 'Tree Traversal - Inorder, Preorder, Postorder',

@@ -53,5 +53,5 @@ Load balancing was introduced to:
 
 
 ---
-
 **Previous Post**: [System Design - Introduction to System Design](/blog/system-design-01)
+**Next Post**: [System Design - Scalability](/blog/system-design-03)

@@ -6,8 +6,8 @@ import ClearIcon from '@mui/icons-material/Clear';
 import BlogComponent from "../components/BlogComponent";
 import styles from "../styles/blog.module.css";
 
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+// import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+// import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 
 import logo from '../assests/my-logo.png';
 
@@ -97,7 +97,7 @@ const Blog = () => {
                     <input type="checkbox" aria-label="strict filter" onChange={() => {
                         setAbsoluteFilterOn(!absoluteFilterOn)
                     }}/>
-                    Match All Tags (Default: Match Any Tag)
+                    Match All Tags
                 </label>
                 <div className={styles['blog-header']}>
                     <div className={blogWrapperClass}>
@@ -134,16 +134,16 @@ const Blog = () => {
                             </button>
                         )}
                     </div>
-                    <button
-                        className={styles["show-more_tag_btn"]}
-                        onClick={() => {
-                            setShowMoreStatus(!showMoreStatus);
-                        }}
-                        aria-label={`show more tags`}
-                    >
-                        {!showMoreStatus ? <ExpandMoreIcon/> : <ExpandLessIcon/>}
-                    </button>
                 </div>
+                <button
+                    className={styles["show-more_tag_btn"]}
+                    onClick={() => {
+                        setShowMoreStatus(!showMoreStatus);
+                    }}
+                    aria-label={`show more tags`}
+                >
+                    {!showMoreStatus ? "More Tags" : "Less Tags"}
+                </button>
                 <div className={styles["blogs"]}>
                     {currentBlogs.map((blog) => {
                         let isTagActive = false;
