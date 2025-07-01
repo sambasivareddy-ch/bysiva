@@ -1,5 +1,14 @@
 const blogs = [
     {
+        'id': 'cp-06',
+        'slug': 'cp-06',
+        'title': 'Tree Traversal - Inorder, Preorder, Postorder',
+        'description': 'Competitive Programming Problem: Implement Tree Traversal methods - Inorder, Preorder, Postorder',
+        'date': '2025-07-01',
+        'domains': ['competitive-programming', 'tree', 'dsa', 'binary-tree'],
+        'filename': 'cp-06.md',
+    },
+    {
         'id': 'cp-05',
         'slug': 'cp-05',
         'title': 'Min Stack',
