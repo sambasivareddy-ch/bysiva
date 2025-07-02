@@ -5,7 +5,7 @@ const blogs = [
         'title': 'Path from Root to Node in Binary Tree',
         'description': 'Competitive Programming Problem: Find the Path of a node from the root in a binary tree',
         'date': '2025-07-02',
-        'domains': ['competitive-programming', 'tree', 'dfs', 'dsa', 'binary-tree'],
+        'domains': ['competitive-programming', 'tree', 'dfs', 'binary-tree'],
         'filename': 'cp-08.md',
     },
     {
@@ -14,7 +14,7 @@ const blogs = [
         'title': 'Left & Right View of a Binary Tree',
         'description': 'Competitive Programming Problem: Find the left & right view of a binary tree',
         'date': '2025-07-02',
-        'domains': ['competitive-programming', 'tree', 'bfs', 'dsa', 'binary-tree'],
+        'domains': ['competitive-programming', 'tree', 'bfs', 'binary-tree'],
         'filename': 'cp-07.md',
     },
     {
@@ -32,7 +32,7 @@ const blogs = [
         'title': 'Tree Traversal - Inorder, Preorder, Postorder',
         'description': 'Competitive Programming Problem: Implement Tree Traversal methods - Inorder, Preorder, Postorder',
         'date': '2025-07-01',
-        'domains': ['competitive-programming', 'tree', 'dsa', 'binary-tree'],
+        'domains': ['competitive-programming', 'tree', 'dsa', 'dfs', 'binary-tree'],
         'filename': 'cp-06.md',
     },
     {
