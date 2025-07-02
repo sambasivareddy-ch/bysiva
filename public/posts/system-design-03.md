@@ -108,4 +108,4 @@ Scalability is a crucial aspect of system design that ensures applications can h
 - **Gaming Platforms**: Scaling game servers horizontally to accommodate a large number of concurrent players while ensuring low latency and high availability.
 
 ---
-**Previous Post**: [System Design - Load Balancing](/blog/system-design-02)
+- **Previous Post**: [System Design - Load Balancing](/blog/system-design-02)

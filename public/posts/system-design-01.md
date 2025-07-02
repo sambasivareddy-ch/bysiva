@@ -61,4 +61,4 @@ We will explore these concepts in more detail in future posts.
 System design is a complex but essential skill for software engineers. By understanding the requirements, breaking down the system into components, and considering key concepts like scalability, reliability, and performance, you can create effective and efficient systems. This post serves as an introduction to the principles of system design, and we will delve deeper into specific topics in future posts. Stay tuned for more insights and practical examples in the upcoming series on system design.
 
 ---
-**Next Post**: [System Design - Load Balancing](/blog/system-design-02)
+- **Next Post**: [System Design - Load Balancing](/blog/system-design-02)
