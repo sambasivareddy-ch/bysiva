@@ -1,5 +1,23 @@
 const blogs = [
     {
+        'id': 'cp-08',
+        'slug': 'cp-08',
+        'title': 'Path from Root to Node in Binary Tree',
+        'description': 'Competitive Programming Problem: Find the Path of a node from the root in a binary tree',
+        'date': '2025-07-02',
+        'domains': ['competitive-programming', 'tree', 'dfs', 'dsa', 'binary-tree'],
+        'filename': 'cp-08.md',
+    },
+    {
+        'id': 'cp-07',
+        'slug': 'cp-07',
+        'title': 'Left & Right View of a Binary Tree',
+        'description': 'Competitive Programming Problem: Find the left & right view of a binary tree',
+        'date': '2025-07-02',
+        'domains': ['competitive-programming', 'tree', 'bfs', 'dsa', 'binary-tree'],
+        'filename': 'cp-07.md',
+    },
+    {
         'id': 'system-design-03',
         'slug': 'system-design-03',
         'title': '03: System Design - Scalability',
