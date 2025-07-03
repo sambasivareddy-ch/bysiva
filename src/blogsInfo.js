@@ -1,12 +1,21 @@
 const blogs = [
     {
+        'id': 'clock-sweep',
+        'slug': 'clock-sweep',
+        'title': 'Clock Sweep Algorithm in PostgreSQL',
+        'description': 'This blog will introduce about the Clock-Sweep Algorithm used in PG for Page replacement in buffers',
+        'date': '2025-07-03',
+        'domains': ['postgresql', 'algorithms'],
+        'filename': 'postgres/clock-sweep.md'
+    },
+    {
         'id': 'cp-11',
         'slug': 'cp-11',
         'title': 'Maximum Depth of a Binary Tree',
         'description': 'Competitive Programming Problem: Find the maximum depth of a Binary Tree from root to leaf node',
         'date': '2025-07-03',
         'domains': ['competitive-programming', 'tree', 'binary-tree'],
-        'filename': 'cp-11.md',
+        'filename': 'competetive-programming/cp-11.md',
     },
     {
         'id': 'cp-10',
@@ -15,7 +24,7 @@ const blogs = [
         'description': 'Competitive Programming Problem: Given the tree, give the level wise nodes as a list',
         'date': '2025-07-03',
         'domains': ['competitive-programming', 'tree', 'tree-traversal', 'binary-tree'],
-        'filename': 'cp-10.md',
+        'filename': 'competetive-programming/cp-10.md',
     },
     {
         'id': 'cp-09',
@@ -24,7 +33,7 @@ const blogs = [
         'description': 'Competitive Programming Problem: Identify whether two trees are identical or not',
         'date': '2025-07-03',
         'domains': ['competitive-programming', 'tree', 'binary-tree'],
-        'filename': 'cp-09.md',
+        'filename': 'competetive-programming/cp-09.md',
     },
     {
         'id': 'cp-08',
@@ -33,7 +42,7 @@ const blogs = [
         'description': 'Competitive Programming Problem: Find the Path of a node from the root in a binary tree',
         'date': '2025-07-02',
         'domains': ['competitive-programming', 'tree', 'binary-tree'],
-        'filename': 'cp-08.md',
+        'filename': 'competetive-programming/cp-08.md',
     },
     {
         'id': 'cp-07',
@@ -42,7 +51,7 @@ const blogs = [
         'description': 'Competitive Programming Problem: Find the left & right view of a binary tree',
         'date': '2025-07-02',
         'domains': ['competitive-programming', 'tree', 'binary-tree'],
-        'filename': 'cp-07.md',
+        'filename': 'competetive-programming/cp-07.md',
     },
     {
         'id': 'system-design-03',
@@ -51,7 +60,7 @@ const blogs = [
         'description': 'Third post in the system design series, focusing on scalability techniques.',
         'date': '2025-07-01',
         'domains': ['system-design'],
-        'filename': 'system-design-03.md',
+        'filename': 'system-design/system-design-03.md',
     },
     {
         'id': 'cp-06',
@@ -60,7 +69,7 @@ const blogs = [
         'description': 'Competitive Programming Problem: Implement Tree Traversal methods - Inorder, Preorder, Postorder',
         'date': '2025-07-01',
         'domains': ['competitive-programming', 'tree', 'tree-traversal', 'binary-tree'],
-        'filename': 'cp-06.md',
+        'filename': 'competetive-programming/cp-06.md',
     },
     {
         'id': 'cp-05',
@@ -69,7 +78,7 @@ const blogs = [
         'description': 'Competitive Programming Problem: Implement Min Stack',
         'date': '2025-06-23',
         'domains': ['competitive-programming', 'stack'],
-        'filename': 'cp-05.md',
+        'filename': 'competetive-programming/cp-05.md',
     },
     {
         'id': 'cp-04',
@@ -78,7 +87,7 @@ const blogs = [
         'description': 'Competitive Programming Problem: Check for Balanced Parenthesis',
         'date': '2025-06-21',
         'domains': ['competitive-programming', 'stack'],
-        'filename': 'cp-04.md',
+        'filename': 'competetive-programming/cp-04.md',
     },
     {
         'id': 'cp-03',
@@ -87,7 +96,7 @@ const blogs = [
         'description': 'Competitive Programming Problem: Stack linear data structure implementation',
         'date': '2025-06-21',
         'domains': ['competitive-programming', 'dsa', 'stack'],
-        'filename': 'cp-03.md',
+        'filename': 'competetive-programming/cp-03.md',
     },
     {
         'id': 'math-01',
@@ -105,7 +114,7 @@ const blogs = [
         'description': 'Competitive Programming Problem: Find the next greater element for each element in an array.',
         'date': '2025-06-20',
         'domains': ['competitive-programming', 'stack'],
-        'filename': 'cp-02.md',
+        'filename': 'competetive-programming/cp-02.md',
     },
     {
         'id': 'system-design-02',
@@ -114,7 +123,7 @@ const blogs = [
         'description': 'Second post in the system design series, focusing on load balancing techniques.',
         'date': '2025-06-19',
         'domains': ['system-design'],
-        'filename': 'system-design-02.md',
+        'filename': 'system-design/system-design-02.md',
     },
     {
         'id': 'system-design-01',
@@ -123,7 +132,7 @@ const blogs = [
         'description': 'First post in the system design series, covering the basics of system design.',
         'date': '2025-06-19',
         'domains': ['system-design'],
-        'filename': 'system-design-01.md',
+        'filename': 'system-design/system-design-01.md',
     },
     {
         'id': 'cp-01',
@@ -132,7 +141,7 @@ const blogs = [
         'description': 'Competitive Programming Problem: Find the maximum sum of a contiguous subarray.',
         'date': '2025-06-19',
         'domains': ['competitive-programming', 'dynamic-programming', 'array'],
-        'filename': 'cp-01.md',
+        'filename': 'competetive-programming/cp-01.md',
     },
 ]
 
