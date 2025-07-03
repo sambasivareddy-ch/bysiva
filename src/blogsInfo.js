@@ -1,11 +1,38 @@
 const blogs = [
     {
+        'id': 'cp-11',
+        'slug': 'cp-11',
+        'title': 'Maximum Depth of a Binary Tree',
+        'description': 'Competitive Programming Problem: Find the maximum depth of a Binary Tree from root to leaf node',
+        'date': '2025-07-03',
+        'domains': ['competitive-programming', 'tree', 'binary-tree'],
+        'filename': 'cp-11.md',
+    },
+    {
+        'id': 'cp-10',
+        'slug': 'cp-10',
+        'title': 'Level Order Traversal',
+        'description': 'Competitive Programming Problem: Given the tree, give the level wise nodes as a list',
+        'date': '2025-07-03',
+        'domains': ['competitive-programming', 'tree', 'tree-traversal', 'binary-tree'],
+        'filename': 'cp-10.md',
+    },
+    {
+        'id': 'cp-09',
+        'slug': 'cp-09',
+        'title': 'Identical Trees',
+        'description': 'Competitive Programming Problem: Identify whether two trees are identical or not',
+        'date': '2025-07-03',
+        'domains': ['competitive-programming', 'tree', 'binary-tree'],
+        'filename': 'cp-09.md',
+    },
+    {
         'id': 'cp-08',
         'slug': 'cp-08',
         'title': 'Path from Root to Node in Binary Tree',
         'description': 'Competitive Programming Problem: Find the Path of a node from the root in a binary tree',
         'date': '2025-07-02',
-        'domains': ['competitive-programming', 'tree', 'dfs', 'binary-tree'],
+        'domains': ['competitive-programming', 'tree', 'binary-tree'],
         'filename': 'cp-08.md',
     },
     {
@@ -14,7 +41,7 @@ const blogs = [
         'title': 'Left & Right View of a Binary Tree',
         'description': 'Competitive Programming Problem: Find the left & right view of a binary tree',
         'date': '2025-07-02',
-        'domains': ['competitive-programming', 'tree', 'bfs', 'binary-tree'],
+        'domains': ['competitive-programming', 'tree', 'binary-tree'],
         'filename': 'cp-07.md',
     },
     {
@@ -32,7 +59,7 @@ const blogs = [
         'title': 'Tree Traversal - Inorder, Preorder, Postorder',
         'description': 'Competitive Programming Problem: Implement Tree Traversal methods - Inorder, Preorder, Postorder',
         'date': '2025-07-01',
-        'domains': ['competitive-programming', 'tree', 'dsa', 'dfs', 'binary-tree'],
+        'domains': ['competitive-programming', 'tree', 'tree-traversal', 'binary-tree'],
         'filename': 'cp-06.md',
     },
     {
