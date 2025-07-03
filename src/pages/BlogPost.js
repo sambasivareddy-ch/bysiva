@@ -32,7 +32,7 @@ const BlogPost = () => {
     
     return (
         <div className={styles["blog-post-wrapper"]}>
-            <Link to={'/blog'}>
+            <Link to={'/'}>
                 <ArrowBackIcon/>
             </Link>
             <ReactMarkdown>
