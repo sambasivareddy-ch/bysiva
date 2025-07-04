@@ -1,4 +1,22 @@
 const blogs = [
+     {
+        'id': 'cp-13',
+        'slug': 'cp-13',
+        'title': 'Construct Binary Tree from Inorder & Preorder',
+        'description': 'Competitive Programming Problem: Construct the binary tree from the arrays of inorder & preorder traversals',
+        'date': '2025-07-03',
+        'domains': ['competitive-programming', 'tree', 'binary-tree'],
+        'filename': 'competetive-programming/cp-13.md',
+    },
+     {
+        'id': 'cp-12',
+        'slug': 'cp-12',
+        'title': 'Check for Symmetry of a Binary Tree',
+        'description': 'Competitive Programming Problem: Check whether the given binary-tree is a symmetry or not',
+        'date': '2025-07-04',
+        'domains': ['competitive-programming', 'tree', 'binary-tree'],
+        'filename': 'competetive-programming/cp-12.md',
+    },
     {
         'id': 'clock-sweep',
         'slug': 'clock-sweep',
