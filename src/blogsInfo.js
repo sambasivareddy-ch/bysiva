@@ -1,5 +1,14 @@
 const blogs = [
     {
+        'id': 'react-01',
+        'slug': 'react-01',
+        'title': 'React Context: createContext & useContext',
+        'description': 'A blog to explain about Context, createContext & useContext Hook in React',
+        'date': '2025-07-05',
+        'domains': ['react'],
+        'filename': 'react/react-context.md',
+    },
+    {
         'id': 'cp-14',
         'slug': 'cp-14',
         'title': 'Construct Binary Tree from Inorder & Postorder',
