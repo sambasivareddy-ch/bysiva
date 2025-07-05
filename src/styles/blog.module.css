@@ -366,6 +366,13 @@ img {
     align-items: center;
 }
 
+.blog-description {
+    font-size: 16px;
+    line-height: 20px;
+    margin: 10px 0;
+    color: #424242;
+}
+
 @media screen and (min-width: 300px) and (max-width: 600px) {
     .blog-main, .blog-post-wrapper  {
         width: 95%;

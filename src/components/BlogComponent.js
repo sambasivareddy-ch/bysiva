@@ -15,6 +15,7 @@ const BlogComponent = (props) => {
                             </Link>
                         </h3>
                         <p>{props.date}</p>
+                        <p className={styles['blog-description']}>{props.description}</p>
                     </div>
                 </div>
                 <div className={styles["blog-comp__domains"]}>
