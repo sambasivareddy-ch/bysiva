@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { BarLoader } from "react-spinners";
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 import blogs from "../blogsInfo";
 import styles from "../styles/blog.module.css";
@@ -12,6 +15,23 @@ import styles from "../styles/blog.module.css";
 const BlogPost = () => {
     const { slug } = useParams();
     const [content, setContent] = useState("");
+    const [url, setUrl] = useState("");
+
+    // Set the URL to the current page's URL
+    useEffect(() => {
+        setUrl(window.location.href);
+    }, []);
+
+    const copyToClipboardHandler = () => {
+        navigator.clipboard.writeText(url)
+            .then(() => {
+                alert("URL copied to clipboard!");
+            })
+            .catch((err) => {
+                console.error("Failed to copy URL: ", err);
+                alert("Failed to copy URL.");
+            });
+    };
 
     useEffect(() => {
         const post = blogs.find((p) => p.slug === slug);
@@ -35,6 +55,20 @@ const BlogPost = () => {
             <Link to={'/'}>
                 <ArrowBackIcon/>
             </Link>
+            <div className={styles["blog-post-header"]}>
+                <p>Share on:</p>
+                <div className={styles["blog-post-share"]}>
+                    <button onClick={copyToClipboardHandler} className={styles["copy-url-button"]}>
+                        <ContentCopyIcon/>
+                    </button>
+                    <a href={`https://www.instagram.com/sharing?text=${encodeURIComponent(url)}`} target="_blank" rel="noopener noreferrer">
+                        <InstagramIcon/>
+                    </a>
+                    <a href={`https://api.whatsapp.com/send?text=${encodeURIComponent(url)}`} target="_blank" rel="noopener noreferrer">
+                        <WhatsAppIcon/>
+                    </a>
+                </div>
+            </div>
             <ReactMarkdown>
                 {content}
             </ReactMarkdown>

@@ -11,7 +11,7 @@ const blogs = [
     {
         'id': 'system-design-04',
         'slug': 'system-design-04',
-        'title': '03: System Design - CDNs',
+        'title': '04: System Design - CDNs',
         'description': 'Fourth post in the system design series, discussed about CDNs.',
         'date': '2025-07-04',
         'domains': ['system-design'],

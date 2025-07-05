@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 
 import CalendarHeatmap from 'react-calendar-heatmap';
 import 'react-calendar-heatmap/dist/styles.css';
@@ -6,22 +6,20 @@ import ClearIcon from '@mui/icons-material/Clear';
 import BlogComponent from "../components/BlogComponent";
 import styles from "../styles/blog.module.css";
 
-// import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-// import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import SwapVertIcon from '@mui/icons-material/SwapVert';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 
-import logo from '../assests/my-logo.png';
+import TagsContext from "../store/tagsContext";
 
 import blogs from "../blogsInfo";
 
 const Blog = () => {
+    const { selectedTags, matchAllTags, setSelectedTags, removeSelectedTag, toggleMatchAllTags } = useContext(TagsContext);
+
     const [blogTags, setBlogTags] = useState([]);
-    const [activeTags, setActiveTags] = useState([]);
-    const [absoluteFilterOn, setAbsoluteFilterOn] = useState(false);
     const [dateHeatMap, setDateHeatMap] = useState([]);
     const [selectedDate, setSelectedDate] = useState(null);
     const [currentBlogs, setCurrentBlogs] = useState(blogs);
@@ -58,16 +56,15 @@ const Blog = () => {
 
     useEffect(() => {
         // Initialize blogTags with all unique tags from blogs
-        // const initialTags = Array.from(new Set(currentBlogs.flatMap(blog => blog.domains)));
         const initialTags = Array.from(new Set(currentBlogs.flatMap(blog => blog.domains)));
         setBlogTags(initialTags);
     }, [currentBlogs]);
 
     const handleTagClick = (tag) => {
-        if (activeTags.includes(tag)) {
-            setActiveTags(activeTags.filter((t) => t !== tag))
+        if (selectedTags.includes(tag)) {
+            removeSelectedTag(tag);
         } else {
-            setActiveTags([tag, ...activeTags])
+            setSelectedTags((prevTags) => [...prevTags, tag]);
         }
     }
 
@@ -75,12 +72,6 @@ const Blog = () => {
         <div className={styles["blog-wrapper"]}>
             <div className={styles["blog-main"]}>
                 <div className={styles["blog-header"]}>
-                    {/* <button className={styles["home-btn"]} aria-label="navigate to home">
-                        <img src={logo} alt="author"/>
-                        <a href="https://sambasiva.vercel.app" target="_blank" rel="noreferrer" className={styles['portfolio-link']}>
-                            Visit My Profile
-                        </a>
-                    </button> */}
                     <div className={styles["social-links"]}>
                         <a href="https://sambasiva.vercel.app" target="_blank" rel="noreferrer" aria-label="Portfolio profile">
                             <PersonOutlineIcon fontSize="medium" />
@@ -96,7 +87,7 @@ const Blog = () => {
                         </a>
                     </div>
                 </div>
-                <div className={styles['heatmap']}>
+                {/* <div className={styles['heatmap']}>
                     <CalendarHeatmap
                         startDate={new Date('2025-01-01')}
                         endDate={new Date('2025-12-31')}
@@ -113,10 +104,10 @@ const Blog = () => {
                             return styles[`color-scale-${value.count}`];
                         }}
                     />
-                </div>
+                </div> */}
                 <label className={styles['filtering-option']}>
-                    <input type="checkbox" aria-label="strict filter" onChange={() => {
-                        setAbsoluteFilterOn(!absoluteFilterOn)
+                    <input type="checkbox" aria-label="strict filter" checked={matchAllTags} onChange={() => {
+                        toggleMatchAllTags();
                     }}/>
                     Match All Tags
                 </label>
@@ -125,18 +116,18 @@ const Blog = () => {
                         {blogTags.map((tag) => (
                             <button
                                 key={tag}
-                                className={`${styles["blog-tag"]} ${activeTags.includes(tag) ? styles["active"] : ""}`}
+                                className={`${styles["blog-tag"]} ${selectedTags.includes(tag) ? styles["active"] : ""}`}
                                 onClick={() => handleTagClick(tag)}
                                 aria-label={`${tag} filter`}
                             >
                                 {tag}
                             </button>
                         ))}
-                        {(activeTags.length !== 0) && (
+                        {(selectedTags.length !== 0) && (
                             <button
                                 className={styles["blog-tag_reset"]}
                                 onClick={() => {
-                                    setActiveTags([])
+                                    setSelectedTags([])
                                 }}
                                 aria-label={`reset applied filter`}
                             >
@@ -168,15 +159,15 @@ const Blog = () => {
                 <div className={styles["blogs"]}>
                     {currentBlogs.map((blog) => {
                         let isTagActive = false;
-                        if (!absoluteFilterOn) {
-                            if (activeTags.length !== 0) {
-                                isTagActive = activeTags.some(tag => blog.domains.includes(tag));
+                        if (!matchAllTags) {
+                            if (selectedTags.length !== 0) {
+                                isTagActive = selectedTags.some(tag => blog.domains.includes(tag));
                             } else {
                                 isTagActive = blogTags.some(tag => blog.domains.includes(tag));
                             }
                         } else {
-                            if (activeTags.length !== 0) {
-                                isTagActive = activeTags.every(tag => blog.domains.includes(tag));
+                            if (selectedTags.length !== 0) {
+                                isTagActive = selectedTags.every(tag => blog.domains.includes(tag));
                             } else {
                                 isTagActive = blogTags.some(tag => blog.domains.includes(tag));
                             }
