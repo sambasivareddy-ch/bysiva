@@ -61,3 +61,6 @@ No, a CDN is not the same as a load balancer, although they both aim to improve 
 - **Bandwidth Savings**: CDNs can reduce bandwidth costs by caching and serving static content, minimizing the amount of data that needs to be transferred from the origin server.
 - **Improved Reliability**: CDNs provide redundancy and fault tolerance by distributing content across multiple edge servers. If one server goes down, requests can be rerouted to another server, ensuring high availability and reliability.
 - **Enhanced Security**: CDNs can provide additional security features such as DDoS protection, SSL/TLS encryption, and Web Application Firewalls (WAFs) to protect against malicious attacks and ensure secure content delivery.
+
+---
+- **Previous Post**: [System Design - Scalability](/blog/system-design-03)

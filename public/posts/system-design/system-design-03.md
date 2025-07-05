@@ -109,3 +109,4 @@ Scalability is a crucial aspect of system design that ensures applications can h
 
 ---
 - **Previous Post**: [System Design - Load Balancing](/blog/system-design-02)
+- **Next Post**: [System Design - CDNs](/blog/system-design-04)

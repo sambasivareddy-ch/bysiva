@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 
-import CalendarHeatmap from 'react-calendar-heatmap';
+// import CalendarHeatmap from 'react-calendar-heatmap';
 import 'react-calendar-heatmap/dist/styles.css';
 import ClearIcon from '@mui/icons-material/Clear';
 import BlogComponent from "../components/BlogComponent";
@@ -25,6 +25,7 @@ const Blog = () => {
     const [currentBlogs, setCurrentBlogs] = useState(blogs);
     const [showMoreStatus, setShowMoreStatus] = useState(false);
     const [blogWrapperClass, setBlogWrapperClass] = useState(styles['blog-tags']);
+    const [tagsCount, setTagsCount] = useState({});
 
     useEffect(() => {
         if (!showMoreStatus) {
@@ -57,7 +58,15 @@ const Blog = () => {
     useEffect(() => {
         // Initialize blogTags with all unique tags from blogs
         const initialTags = Array.from(new Set(currentBlogs.flatMap(blog => blog.domains)));
+        initialTags.sort((a, b) => a.localeCompare(b)); // Sort tags alphabetically
         setBlogTags(initialTags);
+
+        // Initialize tagsCount with the count of each tag
+        const initialTagsCount = {};
+        initialTags.forEach(tag => {
+            initialTagsCount[tag] = currentBlogs.filter(blog => blog.domains.includes(tag)).length;
+        });
+        setTagsCount(initialTagsCount);
     }, [currentBlogs]);
 
     const handleTagClick = (tag) => {
@@ -120,7 +129,8 @@ const Blog = () => {
                                 onClick={() => handleTagClick(tag)}
                                 aria-label={`${tag} filter`}
                             >
-                                {tag}
+                                <span>{tag}</span> 
+                                <span className={styles["blog-tag_count"]}>{tagsCount[tag] || 0}</span>
                             </button>
                         ))}
                         {(selectedTags.length !== 0) && (

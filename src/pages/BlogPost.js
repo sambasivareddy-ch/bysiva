@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { BarLoader } from "react-spinners";
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
-import InstagramIcon from '@mui/icons-material/Instagram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 import blogs from "../blogsInfo";
@@ -61,9 +60,6 @@ const BlogPost = () => {
                     <button onClick={copyToClipboardHandler} className={styles["copy-url-button"]}>
                         <ContentCopyIcon/>
                     </button>
-                    <a href={`https://www.instagram.com/sharing?text=${encodeURIComponent(url)}`} target="_blank" rel="noopener noreferrer">
-                        <InstagramIcon/>
-                    </a>
                     <a href={`https://api.whatsapp.com/send?text=${encodeURIComponent(url)}`} target="_blank" rel="noopener noreferrer">
                         <WhatsAppIcon/>
                     </a>
