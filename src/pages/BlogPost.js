@@ -8,6 +8,9 @@ import { BarLoader } from "react-spinners";
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
 import blogs from "../blogsInfo";
 import styles from "../styles/blog.module.css";
 
@@ -75,9 +78,31 @@ const BlogPost = () => {
                     </span>
                 ))} 
             </div>
-            <ReactMarkdown>
+            {/* <ReactMarkdown>
                 {content}
-            </ReactMarkdown>
+            </ReactMarkdown> */}
+            <ReactMarkdown
+                children={content}
+                components={{
+                    code({ node, inline, className, children, ...props }) {
+                    const match = /language-(\w+)/.exec(className || '');
+                    return !inline && match ? (
+                        <SyntaxHighlighter
+                        style={oneDark}
+                        language={match[1]}
+                        PreTag="div"
+                        {...props}
+                        >
+                        {String(children).replace(/\n$/, '')}
+                        </SyntaxHighlighter>
+                    ) : (
+                        <code className={className} {...props}>
+                        {children}
+                        </code>
+                    );
+                    },
+                }}
+            />
         </div>
     );
 }   

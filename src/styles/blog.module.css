@@ -330,6 +330,12 @@ img {
     color: #fff;
 }
 
+code,
+pre,
+pre div {
+  background-color: transparent !important; /* or any color you want */
+}
+
 /* .blog-post-wrapper p, ol, ul {
     font-weight: 300;
 } */
