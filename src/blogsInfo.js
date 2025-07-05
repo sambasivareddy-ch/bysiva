@@ -5,7 +5,7 @@ const blogs = [
         'title': 'Construct Binary Tree from Inorder & Postorder',
         'description': 'Competitive Programming Problem: Construct the binary tree from the arrays of Inorder & Postorder traversals',
         'date': '2025-07-05',
-        'domains': ['competitive-programming', 'tree', 'binary-tree'],
+        'domains': ['competitive-programming', 'tree'],
         'filename': 'competetive-programming/cp-14.md',
     },
     {
@@ -23,7 +23,7 @@ const blogs = [
         'title': 'Construct Binary Tree from Inorder & Preorder',
         'description': 'Competitive Programming Problem: Construct the binary tree from the arrays of inorder & preorder traversals',
         'date': '2025-07-03',
-        'domains': ['competitive-programming', 'tree', 'binary-tree'],
+        'domains': ['competitive-programming', 'tree'],
         'filename': 'competetive-programming/cp-13.md',
     },
      {
@@ -32,7 +32,7 @@ const blogs = [
         'title': 'Check for Symmetry of a Binary Tree',
         'description': 'Competitive Programming Problem: Check whether the given binary-tree is a symmetry or not',
         'date': '2025-07-04',
-        'domains': ['competitive-programming', 'tree', 'binary-tree'],
+        'domains': ['competitive-programming', 'tree'],
         'filename': 'competetive-programming/cp-12.md',
     },
     {
@@ -41,7 +41,7 @@ const blogs = [
         'title': 'Clock Sweep Algorithm in PostgreSQL',
         'description': 'This blog will introduce about the Clock-Sweep Algorithm used in PG for Page replacement in buffers',
         'date': '2025-07-03',
-        'domains': ['postgresql', 'algorithms'],
+        'domains': ['postgresql'],
         'filename': 'postgres/clock-sweep.md'
     },
     {
@@ -50,7 +50,7 @@ const blogs = [
         'title': 'Maximum Depth of a Binary Tree',
         'description': 'Competitive Programming Problem: Find the maximum depth of a Binary Tree from root to leaf node',
         'date': '2025-07-03',
-        'domains': ['competitive-programming', 'tree', 'binary-tree'],
+        'domains': ['competitive-programming', 'tree'],
         'filename': 'competetive-programming/cp-11.md',
     },
     {
@@ -59,7 +59,7 @@ const blogs = [
         'title': 'Level Order Traversal',
         'description': 'Competitive Programming Problem: Given the tree, give the level wise nodes as a list',
         'date': '2025-07-03',
-        'domains': ['competitive-programming', 'tree', 'tree-traversal', 'binary-tree'],
+        'domains': ['competitive-programming', 'tree'],
         'filename': 'competetive-programming/cp-10.md',
     },
     {
@@ -68,7 +68,7 @@ const blogs = [
         'title': 'Identical Trees',
         'description': 'Competitive Programming Problem: Identify whether two trees are identical or not',
         'date': '2025-07-03',
-        'domains': ['competitive-programming', 'tree', 'binary-tree'],
+        'domains': ['competitive-programming', 'tree'],
         'filename': 'competetive-programming/cp-09.md',
     },
     {
@@ -77,7 +77,7 @@ const blogs = [
         'title': 'Path from Root to Node in Binary Tree',
         'description': 'Competitive Programming Problem: Find the Path of a node from the root in a binary tree',
         'date': '2025-07-02',
-        'domains': ['competitive-programming', 'tree', 'binary-tree'],
+        'domains': ['competitive-programming', 'tree'],
         'filename': 'competetive-programming/cp-08.md',
     },
     {
@@ -86,7 +86,7 @@ const blogs = [
         'title': 'Left & Right View of a Binary Tree',
         'description': 'Competitive Programming Problem: Find the left & right view of a binary tree',
         'date': '2025-07-02',
-        'domains': ['competitive-programming', 'tree', 'binary-tree'],
+        'domains': ['competitive-programming', 'tree'],
         'filename': 'competetive-programming/cp-07.md',
     },
     {
@@ -104,7 +104,7 @@ const blogs = [
         'title': 'Tree Traversal - Inorder, Preorder, Postorder',
         'description': 'Competitive Programming Problem: Implement Tree Traversal methods - Inorder, Preorder, Postorder',
         'date': '2025-07-01',
-        'domains': ['competitive-programming', 'tree', 'tree-traversal', 'binary-tree'],
+        'domains': ['competitive-programming', 'tree'],
         'filename': 'competetive-programming/cp-06.md',
     },
     {
@@ -131,7 +131,7 @@ const blogs = [
         'title': 'Stack - Linear Data Structure',
         'description': 'Competitive Programming Problem: Stack linear data structure implementation',
         'date': '2025-06-21',
-        'domains': ['competitive-programming', 'dsa', 'stack'],
+        'domains': ['competitive-programming', 'stack'],
         'filename': 'competetive-programming/cp-03.md',
     },
     {
@@ -176,7 +176,7 @@ const blogs = [
         'title': 'Maximum Subarray Sum',
         'description': 'Competitive Programming Problem: Find the maximum sum of a contiguous subarray.',
         'date': '2025-06-19',
-        'domains': ['competitive-programming', 'dynamic-programming', 'array'],
+        'domains': ['competitive-programming', 'dynamic-programming'],
         'filename': 'competetive-programming/cp-01.md',
     },
 ]

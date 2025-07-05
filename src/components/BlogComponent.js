@@ -14,15 +14,15 @@ const BlogComponent = (props) => {
                                 {props.title}
                             </Link>
                         </h3>
-                        <p>{props.date}</p>
+                        <p>{(new Date(props.date)).toLocaleDateString('en-US',{ year: 'numeric', month: 'long', day: 'numeric' })}</p>
                         <p className={styles['blog-description']}>{props.description}</p>
                     </div>
                 </div>
-                <div className={styles["blog-comp__domains"]}>
+                {/* <div className={styles["blog-comp__domains"]}>
                     {props.domains.map((domain) => {
                         return <span key={Math.random()}>{domain}</span>;
                     })}
-                </div>
+                </div> */}
             </div>
         </Link>
     );

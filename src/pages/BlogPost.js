@@ -15,6 +15,7 @@ const BlogPost = () => {
     const { slug } = useParams();
     const [content, setContent] = useState("");
     const [url, setUrl] = useState("");
+    const [tags, setTags] = useState([]);
 
     // Set the URL to the current page's URL
     useEffect(() => {
@@ -35,6 +36,8 @@ const BlogPost = () => {
     useEffect(() => {
         const post = blogs.find((p) => p.slug === slug);
         if (!post) return;
+
+        setTags(post.domains);
 
         fetch(`/posts/${post.filename}`)
         .then((res) => res.text())
@@ -64,6 +67,13 @@ const BlogPost = () => {
                         <WhatsAppIcon/>
                     </a>
                 </div>
+            </div>
+            <div className={styles["blog-post-tags"]}>
+                {tags.map((tag, index) => (
+                    <span key={index} className={styles["blog-post-tag"]}>
+                        {tag}
+                    </span>
+                ))} 
             </div>
             <ReactMarkdown>
                 {content}

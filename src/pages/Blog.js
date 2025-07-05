@@ -9,8 +9,9 @@ import styles from "../styles/blog.module.css";
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import SwapVertIcon from '@mui/icons-material/SwapVert';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 import TagsContext from "../store/tagsContext";
 
@@ -20,12 +21,37 @@ const Blog = () => {
     const { selectedTags, matchAllTags, setSelectedTags, removeSelectedTag, toggleMatchAllTags } = useContext(TagsContext);
 
     const [blogTags, setBlogTags] = useState([]);
-    const [dateHeatMap, setDateHeatMap] = useState([]);
     const [selectedDate, setSelectedDate] = useState(null);
     const [currentBlogs, setCurrentBlogs] = useState(blogs);
     const [showMoreStatus, setShowMoreStatus] = useState(false);
     const [blogWrapperClass, setBlogWrapperClass] = useState(styles['blog-tags']);
     const [tagsCount, setTagsCount] = useState({});
+    const [presentPageIndex, setPresentPageIndex] = useState(0);
+
+    useEffect(() => {
+        if (selectedTags) {
+            setCurrentBlogs(
+                blogs
+                .filter((blog) => {
+                    if (!matchAllTags) {
+                        if (selectedTags.length !== 0) {
+                            return selectedTags.some(tag => blog.domains.includes(tag));
+                        } else {
+                            return blogTags.some(tag => blog.domains.includes(tag));
+                        }
+                    } else {
+                        if (selectedTags.length !== 0) {
+                            return selectedTags.every(tag => blog.domains.includes(tag));
+                        } else {
+                            return blogTags.some(tag => blog.domains.includes(tag));
+                        }
+                    }
+                })
+            )
+        } else {
+            setCurrentBlogs(blogs);
+        }
+    }, [selectedTags, matchAllTags, blogTags]);
 
     useEffect(() => {
         if (!showMoreStatus) {
@@ -34,17 +60,6 @@ const Blog = () => {
             setBlogWrapperClass(styles['blog-tags_more'])
         }
     }, [showMoreStatus]);
-
-    useEffect(() => {
-        const dateCounts = blogs.reduce((acc, blog) => {
-            acc[blog.date] = (acc[blog.date] || 0) + 1;
-            return acc;
-        }, {});
-    
-        const result = Object.entries(dateCounts).map(([date, count]) => ({ date, count }));
-
-        setDateHeatMap(result);
-    }, []);
 
     useEffect(() => {
         if (selectedDate) {
@@ -57,7 +72,7 @@ const Blog = () => {
 
     useEffect(() => {
         // Initialize blogTags with all unique tags from blogs
-        const initialTags = Array.from(new Set(currentBlogs.flatMap(blog => blog.domains)));
+        const initialTags = Array.from(new Set(blogs.flatMap(blog => blog.domains)));
         initialTags.sort((a, b) => a.localeCompare(b)); // Sort tags alphabetically
         setBlogTags(initialTags);
 
@@ -96,24 +111,6 @@ const Blog = () => {
                         </a>
                     </div>
                 </div>
-                {/* <div className={styles['heatmap']}>
-                    <CalendarHeatmap
-                        startDate={new Date('2025-01-01')}
-                        endDate={new Date('2025-12-31')}
-                        values={dateHeatMap}
-                        showMonthLabels={false}
-                        gutterSize={2}
-                        onClick={(value) => {
-                            setSelectedDate(value['date'])
-                        }}
-                        classForValue={(value) => {
-                            if (!value) {
-                            return styles['color-empty'];
-                            }
-                            return styles[`color-scale-${value.count}`];
-                        }}
-                    />
-                </div> */}
                 <label className={styles['filtering-option']}>
                     <input type="checkbox" aria-label="strict filter" checked={matchAllTags} onChange={() => {
                         toggleMatchAllTags();
@@ -126,7 +123,10 @@ const Blog = () => {
                             <button
                                 key={tag}
                                 className={`${styles["blog-tag"]} ${selectedTags.includes(tag) ? styles["active"] : ""}`}
-                                onClick={() => handleTagClick(tag)}
+                                onClick={() => {
+                                    handleTagClick(tag);
+                                    setPresentPageIndex(0);
+                                }}
                                 aria-label={`${tag} filter`}
                             >
                                 <span>{tag}</span> 
@@ -157,45 +157,65 @@ const Blog = () => {
                         )}
                     </div>
                 </div>
-                <button
-                    className={styles["show-more_tag_btn"]}
-                    onClick={() => {
-                        setShowMoreStatus(!showMoreStatus);
-                    }}
-                    aria-label={`show more tags`}
-                >
-                    {!showMoreStatus ? "More Tags" : "Less Tags"}
-                </button>
+                <div className={styles["blog-controls"]}>
+                    <button
+                        className={styles["show-more_tag_btn"]}
+                        onClick={() => {
+                            setShowMoreStatus(!showMoreStatus);
+                        }}
+                        aria-label={`show more tags`}
+                    >
+                        {!showMoreStatus ? "More Tags" : "Less Tags"}
+                    </button>
+                    <div className={styles["blog-pagination"]}>
+                        <button
+                            className={styles["blog-pagination-btn"]}
+                            onClick={() => {
+                                if (presentPageIndex > 0) {
+                                    setPresentPageIndex(presentPageIndex - 1);
+                                }
+                            }}
+                            disabled={presentPageIndex === 0}
+                            aria-label={`previous page`}
+                        >
+                            <ArrowBackIosIcon fontSize="small" />
+                        </button>
+                        <span className={styles["blog-pagination-index"]}>
+                            {presentPageIndex + 1} / {Math.floor(currentBlogs.length / 10) + (currentBlogs.length % 10 !== 0)}
+                        </span>
+                        <button
+                            className={styles["blog-pagination-btn"]}
+                            onClick={() => {
+                                if (presentPageIndex < Math.ceil(currentBlogs.length / 10) - 1) {
+                                    setPresentPageIndex(presentPageIndex + 1);
+                                }
+                            }}
+                            disabled={presentPageIndex*10 + 10 >= currentBlogs.length}
+                            aria-label={`next page`}
+                        >
+                            <ArrowForwardIosIcon fontSize="small" />
+                        </button>
+                    </div>
+                </div>
                 <div className={styles["blogs"]}>
-                    {currentBlogs.map((blog) => {
-                        let isTagActive = false;
-                        if (!matchAllTags) {
-                            if (selectedTags.length !== 0) {
-                                isTagActive = selectedTags.some(tag => blog.domains.includes(tag));
-                            } else {
-                                isTagActive = blogTags.some(tag => blog.domains.includes(tag));
-                            }
-                        } else {
-                            if (selectedTags.length !== 0) {
-                                isTagActive = selectedTags.every(tag => blog.domains.includes(tag));
-                            } else {
-                                isTagActive = blogTags.some(tag => blog.domains.includes(tag));
-                            }
-                        }
-
-                        return (
-                            isTagActive && (
-                                <BlogComponent
-                                    key={blog.id}
-                                    title={blog.title}
-                                    description={blog.description}
-                                    domains={blog.domains}
-                                    slug={blog.slug}
-                                    date={blog.date}
-                                />
-                            )
-                        );
-                    })}
+                    {
+                        currentBlogs
+                        .slice(presentPageIndex*10, presentPageIndex*10 + 10)
+                        .map((blog) => { 
+                            return (
+                                (
+                                    <BlogComponent
+                                        key={blog.id}
+                                        title={blog.title}
+                                        description={blog.description}
+                                        domains={blog.domains}
+                                        slug={blog.slug}
+                                        date={blog.date}
+                                    />
+                                )
+                            );
+                        })
+                    }
                 </div>
             </div>
         </div>
