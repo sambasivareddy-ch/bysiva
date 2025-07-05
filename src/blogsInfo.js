@@ -4,7 +4,7 @@ const blogs = [
         'slug': 'cp-14',
         'title': 'Construct Binary Tree from Inorder & Postorder',
         'description': 'Competitive Programming Problem: Construct the binary tree from the arrays of Inorder & Postorder traversals',
-        'date': '2025-07-03',
+        'date': '2025-07-05',
         'domains': ['competitive-programming', 'tree', 'binary-tree'],
         'filename': 'competetive-programming/cp-14.md',
     },
