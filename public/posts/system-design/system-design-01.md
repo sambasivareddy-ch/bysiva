@@ -1,3 +1,12 @@
+---
+title: "Introduction to System Design"
+description: "We will explore the fundamental concepts and principles that guide the design of scalable and efficient systems."
+author: "Siva"
+date: 2025-06-19
+tags: ["System Design"]
+canonical_url: "https://bysiva.vercel.app/blog/system-design-01"
+---
+
 # 01: System Design - Introduction to System Design
 This blog post is the first in a series on system design, where we will explore the fundamental concepts and principles that guide the design of scalable and efficient systems.
 

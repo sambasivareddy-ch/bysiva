@@ -1,3 +1,12 @@
+---
+title: "React Context"
+description: "Learn about the React Context and it's Usage"
+author: "Siva"
+date: 2025-07-06
+tags: ["React", "Frontend", "Context"]
+canonical_url: "https://bysiva.vercel.app/blog/react-01"
+---
+
 # React Context
 ## Introduction
 Usually in React, if you want to pass the information between the components like between the Parent & Children we uses the **Props**

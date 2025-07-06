@@ -1,3 +1,12 @@
+---
+title: "System Design - Scalability"
+description: "We will explore the concept of Scalability and methods to Scale the system"
+author: "Siva"
+date: 2025-07-01
+tags: ["System Design"]
+canonical_url: "https://bysiva.vercel.app/blog/system-design-03"
+---
+
 # 03: Scalability
 Scalability refers to the ability of a system to handle the increased load or growth in demand be it more users, data or transactions without compromising performance or availability. 
 

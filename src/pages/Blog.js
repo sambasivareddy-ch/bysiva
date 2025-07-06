@@ -71,6 +71,8 @@ const Blog = () => {
 
 
     useEffect(() => {
+        document.title = "Blogs";
+        
         // Initialize blogTags with all unique tags from blogs
         const initialTags = Array.from(new Set(blogs.flatMap(blog => blog.domains)));
         initialTags.sort((a, b) => a.localeCompare(b)); // Sort tags alphabetically
@@ -82,7 +84,7 @@ const Blog = () => {
             initialTagsCount[tag] = currentBlogs.filter(blog => blog.domains.includes(tag)).length;
         });
         setTagsCount(initialTagsCount);
-    }, [currentBlogs]);
+    }, []);
 
     const handleTagClick = (tag) => {
         if (selectedTags.includes(tag)) {

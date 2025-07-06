@@ -1,3 +1,12 @@
+---
+title: "System Design - Load Balancing"
+description: "We will explore the concept of load balancing, a critical aspect of designing scalable and efficient systems.."
+author: "Siva"
+date: 2025-06-19
+tags: ["System Design"]
+canonical_url: "https://bysiva.vercel.app/blog/system-design-02"
+---
+
 # 02: System Design - Load Balancing
 This blog post is the second in a series on system design, where we will explore the concept of load balancing, a critical aspect of designing scalable and efficient systems.
 

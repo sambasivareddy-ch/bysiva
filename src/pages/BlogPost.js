@@ -2,6 +2,8 @@ import React, { useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
+import matter from 'gray-matter';
+import { Buffer } from 'buffer';
 
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { BarLoader } from "react-spinners";
@@ -14,6 +16,7 @@ import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import blogs from "../blogsInfo";
 import styles from "../styles/blog.module.css";
 
+window.Buffer = Buffer;
 const BlogPost = () => {
     const { slug } = useParams();
     const [content, setContent] = useState("");
@@ -45,7 +48,20 @@ const BlogPost = () => {
         fetch(`/posts/${post.filename}`)
         .then((res) => res.text())
         .then((text) => {
-            setContent(text);
+            const { content: parsedContent, data: meta } = matter(text);
+            setContent(parsedContent);
+
+            // Optional: update metadata dynamically (e.g., document.title, meta tags)
+            document.title = meta.title || "Blog Post";
+            const metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc && meta.description) {
+                metaDesc.setAttribute("content", meta.description);
+            }
+
+            // Set tags from metadata if not using `blogsInfo`
+            if (meta.tags) {
+                setTags(meta.tags);
+            }
         });
     }, [slug]);
 

@@ -1,3 +1,12 @@
+---
+title: "CDN (Content Delivery Network)"
+description: "We will explore the concept of Content Delivery Networks (CDNs)"
+author: "Siva"
+date: 2025-07-04
+tags: ["System Design"]
+canonical_url: "https://bysiva.vercel.app/blog/system-design-04"
+---
+
 # CDN (Content Delivery Network)
 This blog post is the fourth in a series on system design, where we will explore the concept of Content Delivery Networks (CDNs), a critical aspect of designing scalable and efficient systems.
 
