@@ -1,5 +1,23 @@
 const blogs = [
     {
+        'id': 'cp-16',
+        'slug': 'cp-16',
+        'title': 'Check whether BT is BST or not',
+        'description': 'Competitive Programming Problem: Given the Binary Tree, check whether it is Valid BST or not',
+        'date': '2025-07-07',
+        'domains': ['competitive-programming', 'bst'],
+        'filename': 'competetive-programming/cp-16.md',
+    },
+    {
+        'id': 'cp-15',
+        'slug': 'cp-15',
+        'title': 'Search a key in BST',
+        'description': 'Competitive Programming Problem: Given the BST and a key, search the key in BST',
+        'date': '2025-07-07',
+        'domains': ['competitive-programming', 'bst'],
+        'filename': 'competetive-programming/cp-15.md',
+    },
+    {
         'id': 'react-01',
         'slug': 'react-01',
         'title': 'React Context: createContext & useContext',

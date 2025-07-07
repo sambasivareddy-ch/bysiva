@@ -122,7 +122,7 @@ const App = () => {
 ```
 
 ### Step 3: Consume the Context
-Now we can access the isLightTheme & setIsLightTheme without even passing them to Page component and from Page components to it's children.
+Now we can access the **_theme_** & **_setTheme_** without even passing them to Page component and from Page components to it's children.
 ```jsx
 import { useContext } from 'react';
 import ThemeContext from './ThemeContext';
