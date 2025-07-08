@@ -1,5 +1,14 @@
 const blogs = [
     {
+        'id': 'cp-17',
+        'slug': 'cp-17',
+        'title': 'Inorder Predecessor and Successor in BST',
+        'description': 'Competitive Programming Problem: Given the BST and key, find the inorder predecessor and successor of the key',
+        'date': '2025-07-08',
+        'domains': ['competitive-programming', 'bst'],
+        'filename': 'competetive-programming/cp-17.md',
+    },
+    {
         'id': 'cp-16',
         'slug': 'cp-16',
         'title': 'Check whether BT is BST or not',
