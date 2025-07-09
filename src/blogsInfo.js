@@ -1,5 +1,23 @@
 const blogs = [
     {
+        'id': 'cp-19',
+        'slug': 'cp-19',
+        'title': 'Detect Cycle in Linkedlists',
+        'description': 'Competitive Programming Problem: Given the Linkedlist, find whether the ll has cycle or not',
+        'date': '2025-07-09',
+        'domains': ['competitive-programming', 'linked-list'],
+        'filename': 'competetive-programming/cp-19.md',
+    },
+    {
+        'id': 'cp-18',
+        'slug': 'cp-18',
+        'title': 'Lowest Common Ancestor in BST',
+        'description': 'Competitive Programming Problem: Given the BST, p & q.. Find the LCA of the given values p & q',
+        'date': '2025-07-09',
+        'domains': ['competitive-programming', 'bst'],
+        'filename': 'competetive-programming/cp-18.md',
+    },
+    {
         'id': 'cp-17',
         'slug': 'cp-17',
         'title': 'Inorder Predecessor and Successor in BST',
