@@ -7,7 +7,7 @@ tags: ["System Design"]
 canonical_url: "https://bysiva.vercel.app/blog/system-design-04"
 ---
 
-# CDN (Content Delivery Network)
+# 04: CDN (Content Delivery Network)
 This blog post is the fourth in a series on system design, where we will explore the concept of Content Delivery Networks (CDNs), a critical aspect of designing scalable and efficient systems.
 
 ## Definition
@@ -73,3 +73,4 @@ No, a CDN is not the same as a load balancer, although they both aim to improve 
 
 ---
 - **Previous Post**: [System Design - Scalability](/blog/system-design-03)
+- **Next Post**: [System Design - CAP Theorem](/blog/system-design-05)

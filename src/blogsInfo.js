@@ -1,4 +1,13 @@
 const blogs = [
+     {
+        'id': 'system-design-05',
+        'slug': 'system-design-05',
+        'title': '03: System Design - CAP Theorem',
+        'description': 'Fifth post in the system design series, focusing on CAP Theorem.',
+        'date': '2025-07-09',
+        'domains': ['system-design'],
+        'filename': 'system-design/system-design-05.md',
+    },
     {
         'id': 'cp-19',
         'slug': 'cp-19',
