@@ -248,7 +248,7 @@
 
 .blog-post-wrapper {
     /* font-family: var(--font-family-pop); */
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: var(--font-family-jetbrains);
     line-height: 2;
     width: 60%;
     margin: 20px auto;
