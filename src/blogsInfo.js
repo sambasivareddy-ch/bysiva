@@ -1,4 +1,13 @@
 const blogs = [
+     {
+        'id': 'react-02',
+        'slug': 'react-02',
+        'title': 'React Hook: useState',
+        'description': 'A blog to explain about useState hook in React',
+        'date': '2025-07-10',
+        'domains': ['react'],
+        'filename': 'react/use-state.md',
+    },
     {
         'id': 'cp-20',
         'slug': 'cp-20',
