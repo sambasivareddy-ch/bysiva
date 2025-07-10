@@ -1,4 +1,13 @@
 const blogs = [
+    {
+        'id': 'cp-20',
+        'slug': 'cp-20',
+        'title': 'Reverse the given LinkedList',
+        'description': 'Competitive Programming Problem: Given the Linkedlist, reverse that linkedlist',
+        'date': '2025-07-10',
+        'domains': ['competitive-programming', 'linked-list', 'two-pointers'],
+        'filename': 'competetive-programming/cp-20.md',
+    },
      {
         'id': 'system-design-05',
         'slug': 'system-design-05',
