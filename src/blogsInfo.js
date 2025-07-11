@@ -1,4 +1,13 @@
 const blogs = [
+    {
+        'id': 'cp-21',
+        'slug': 'cp-21',
+        'title': 'Find the intersection of 2 linked lists',
+        'description': 'Competitive Programming Problem: Given the Linkedlist, find whether the ll has cycle or not',
+        'date': '2025-07-09',
+        'domains': ['competitive-programming', 'linked-list'],
+        'filename': 'competetive-programming/cp-21.md',
+    },
      {
         'id': 'react-02',
         'slug': 'react-02',
