@@ -1,5 +1,14 @@
 const blogs = [
     {
+        'id': 'cp-22',
+        'slug': 'cp-22',
+        'title': 'Starting point of a cycle in the given LinkedList',
+        'description': 'Competitive Programming Problem: Given the Linkedlist, find the starting point of the cycle in the ll if exists else Null',
+        'date': '2025-07-12',
+        'domains': ['competitive-programming', 'linked-list'],
+        'filename': 'competetive-programming/cp-22.md',
+    },
+    {
         'id': 'cp-21',
         'slug': 'cp-21',
         'title': 'Find the intersection of 2 linked lists',
@@ -29,7 +38,7 @@ const blogs = [
      {
         'id': 'system-design-05',
         'slug': 'system-design-05',
-        'title': '03: System Design - CAP Theorem',
+        'title': '05: System Design - CAP Theorem',
         'description': 'Fifth post in the system design series, focusing on CAP Theorem.',
         'date': '2025-07-09',
         'domains': ['system-design'],
