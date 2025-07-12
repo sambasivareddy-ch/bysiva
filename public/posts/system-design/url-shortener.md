@@ -131,6 +131,27 @@ In general, the URL shortening systems uses the combination of above things to m
 
 Similarly we can introduce more endpoints like deletion, user creation, user specific urls deletions etc..
 
+## Rate Limiting
+Rate limiting is the process of restricting the number of requests a user or client can make to a server in a given time window.
+### Abuse Prevention ensures that malicious users don't:
+- Overwhelm the service (DoS or spam attacks)
+- Create billions of short URLs in a short time
+- Redirect users to malicious/phishing domains
+- Circumvent the system by automating bots
+### Techinques
+- Fixed Window Counter
+    - Keep a count of requests per user/IP in a fixed window (e.g., 100 requests per 15 minutes).
+- Sliding Window Log
+    - Log timestamps of each request and count the ones that fall in the window. More accurate but memory-heavy.
+- Token Bucket / Leaky Bucket
+    - Each user/IP gets tokens that refill over time. Tokens are consumed per request — if tokens are exhausted, further requests are blocked or queued.
+### Example
+Use Redis INCR with TTL to count requests per user:
+```text
+    INCR shorten_user123
+    EXPIRE shorten_user123 60
+```
+- When shorten_user123 hits 60 requests in specified time-frame further requests from that users will denied.
 
 ## Latency, Caching & Scalability
 - When a user entered a shortened URL in the browser, he will expect to redirect almost instantly, delaying in that may decreases the user experience and may cause high latency.
@@ -196,7 +217,7 @@ Scalability means the ability of the system to handle increasing load (more user
 
 ## Conclusion
 In this blog we have discussed about designing the URL shortener system that includes how to generate the hash, avoiding collision, design database, api, latency, scalability and caching.
-- What we have discussed the definitely required features in this system. If you are interested you can extend the system by adding analytical sections, asynchronous processing and in api about user creation, url deletion etc.
+- What we have discussed the definitely required features in this system. If you are interested you can extend the system by adding analytical sections, asynchronous processing and in api about user creation, url deletion, rate limiting.
 
 ---
 - **Previous Post**: [System Design - CAP Theorem](/blog/cap-theorem)
