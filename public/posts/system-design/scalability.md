@@ -7,7 +7,7 @@ tags: ["System Design"]
 canonical_url: "https://bysiva.vercel.app/blog/system-design-03"
 ---
 
-# 03: Scalability
+# Scalability
 Scalability refers to the ability of a system to handle the increased load or growth in demand be it more users, data or transactions without compromising performance or availability. 
 
 ## How can Systems get increased load or growth in demand?
@@ -117,5 +117,5 @@ Scalability is a crucial aspect of system design that ensures applications can h
 - **Gaming Platforms**: Scaling game servers horizontally to accommodate a large number of concurrent players while ensuring low latency and high availability.
 
 ---
-- **Previous Post**: [System Design - Load Balancing](/blog/system-design-02)
-- **Next Post**: [System Design - CDNs](/blog/system-design-04)
+- **Previous Post**: [System Design - Load Balancing](/blog/load-balancing)
+- **Next Post**: [System Design - CDNs](/blog/cdns)

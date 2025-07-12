@@ -7,7 +7,7 @@ tags: ["System Design"]
 canonical_url: "https://bysiva.vercel.app/blog/system-design-04"
 ---
 
-# 04: CDN (Content Delivery Network)
+# CDN (Content Delivery Network)
 This blog post is the fourth in a series on system design, where we will explore the concept of Content Delivery Networks (CDNs), a critical aspect of designing scalable and efficient systems.
 
 ## Definition
@@ -72,5 +72,5 @@ No, a CDN is not the same as a load balancer, although they both aim to improve 
 - **Enhanced Security**: CDNs can provide additional security features such as DDoS protection, SSL/TLS encryption, and Web Application Firewalls (WAFs) to protect against malicious attacks and ensure secure content delivery.
 
 ---
-- **Previous Post**: [System Design - Scalability](/blog/system-design-03)
-- **Next Post**: [System Design - CAP Theorem](/blog/system-design-05)
+- **Previous Post**: [System Design - Scalability](/blog/scalability)
+- **Next Post**: [System Design - CAP Theorem](/blog/cap-theorem)

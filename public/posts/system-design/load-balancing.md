@@ -7,7 +7,7 @@ tags: ["System Design"]
 canonical_url: "https://bysiva.vercel.app/blog/system-design-02"
 ---
 
-# 02: System Design - Load Balancing
+# System Design - Load Balancing
 This blog post is the second in a series on system design, where we will explore the concept of load balancing, a critical aspect of designing scalable and efficient systems.
 
 ## Definition
@@ -62,5 +62,5 @@ Load balancing was introduced to:
 
 
 ---
-- **Previous Post**: [System Design - Introduction to System Design](/blog/system-design-01)
-- **Next Post**: [System Design - Scalability](/blog/system-design-03)
+- **Previous Post**: [System Design - Introduction to System Design](/blog/intro-to-system-design)
+- **Next Post**: [System Design - Scalability](/blog/scalability)

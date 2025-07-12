@@ -7,7 +7,7 @@ tags: ["System Design"]
 canonical_url: "https://bysiva.vercel.app/blog/system-design-05"
 ---
 
-# 05: CAP Theorem
+# CAP Theorem
 The **CAP Theorem** also known as **Browser's Theorem** stats that, in a distributed systems, you can have only **_two_** out of three guarantee states at the same time
 - **Consistency**: Every read request will give the most recent write as a response or an error
 - **Availability**: Every request will receives a non-error response without a guarantee that it contains **most recent** writes.
@@ -70,4 +70,5 @@ In general distributed system choose below combinations of two out of three guar
     - Better to serve slightly outdated or conflicting data than fail outright.
     - Example: Shopping carts, Social Media Posts etc
 ---
-- **Previous Post**: [System Design - CDNs](/blog/system-design-04)
+- **Previous Post**: [System Design - CDNs](/blog/cdns)
+- **Next Post**: [System Design - URL Shortener](/blog/url-shortener)
