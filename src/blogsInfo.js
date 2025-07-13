@@ -1,5 +1,14 @@
 const blogs = [
     {
+        'id': 'cp-23',
+        'slug': 'cp-23',
+        'title': 'Find the longest common prefix',
+        'description': 'Competitive Programming Problem: Given the list of strings, find the longest common prefix among them',
+        'date': '2025-07-13',
+        'domains': ['competitive-programming', 'strings'],
+        'filename': 'competetive-programming/cp-23.md',
+    },
+    {
         'id': 'system-design-06',
         'slug': 'url-shortener',
         'title': 'System Design - URL Shortener',
