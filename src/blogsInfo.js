@@ -1,4 +1,13 @@
 const blogs = [
+     {
+        'id': 'cp-24',
+        'slug': 'cp-24',
+        'title': 'Valid Anagram',
+        'description': 'Competitive Programming Problem: Given two strings s and t, return true if t is an anagram of s, and false otherwise.',
+        'date': '2025-07-14',
+        'domains': ['competitive-programming', 'strings'],
+        'filename': 'competetive-programming/cp-24.md',
+    },
     {
         'id': 'cp-23',
         'slug': 'cp-23',
