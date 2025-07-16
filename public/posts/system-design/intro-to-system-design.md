@@ -10,6 +10,14 @@ canonical_url: "https://bysiva.vercel.app/blog/system-design-01"
 # System Design - Introduction to System Design
 This blog post is the first in a series on system design, where we will explore the fundamental concepts and principles that guide the design of scalable and efficient systems.
 
+## 📚 Table of Contents
+
+1. [Introduction](#system-design---introduction-to-system-design)  
+2. [What is System Design?](#what-is-system-design)  
+3. [How to Approach System Design](#how-to-approach-system-design)    
+4. [Key Concepts in System Design](#key-concepts-in-system-design)  
+5. [Conclusion](#conclusion)
+
 ## What is System Design?
 - System design is the process of defining the architecture, elements of the system as well as their interactions & relationships, in order to meet specific requirements.
 - It involves making high-level decisions about the structure and behavior of a system, including how components interact, how data flows, and how the system can scale to handle increased load.

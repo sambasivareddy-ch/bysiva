@@ -10,6 +10,13 @@ canonical_url: "https://bysiva.vercel.app/blog/system-design-03"
 # Scalability
 Scalability refers to the ability of a system to handle the increased load or growth in demand be it more users, data or transactions without compromising performance or availability. 
 
+## 📚 Table of Contents
+1. [Introduction](#scalability)  
+2. [How Can Systems Get Increased Load or Growth in Demand?](#how-can-systems-get-increased-load-or-growth-in-demand)  
+3. [Types of Scalability](#types-of-scalability)  
+4. [Conclusion](#conclusion)  
+5. [Example Use Cases](#example-use-cases)
+
 ## How can Systems get increased load or growth in demand?
 - **Increased User Base**: More users accessing the system simultaneously.
 - **Data Growth**: An increase in the amount of data being processed or stored.

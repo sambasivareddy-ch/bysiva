@@ -10,6 +10,34 @@ canonical_url: "https://bysiva.vercel.app/blog/system-design-06"
 # URL Shortener
 In this post, we are going to discuss how to design the feasible and efficient the URL shortener system.
 
+## 📚 Table of Contents
+- [Aim](#aim)
+- [Consideration: Hash Length](#consideration-hash-length)
+  - [Example](#example)
+  - [Base62](#base62)
+- [Calculations](#calculations)
+- [Database Design](#database-design)
+  - [User Table](#user-table)
+  - [URL Table](#url-table)
+- [Collision](#collision)
+  - [How to Avoid/Handle Collisions](#how-to-avoidhandle-collisions)
+- [API](#api)
+  - [Shorten URL (Creation)](#shorten-url-creation)
+  - [Redirect URL (Redirection Path)](#redirect-url-redirection-path)
+- [Rate Limiting](#rate-limiting)
+  - [Abuse Prevention ensures that malicious users dont](#abuse-prevention-ensures-that-malicious-users-dont)
+  - [Techinques](#techinques)
+  - [Example](#example-1)
+- [Latency, Caching & Scalability](#latency-caching--scalability)
+  - [Where does latency come from our current design](#where-does-latency-come-from-our-current-design)
+  - [How can we minimize it](#how-can-we-minimize-it)
+    - [Where to Cache](#where-to-cache)
+  - [Scalability](#scalability)
+    - [Where are the bottlenecks in our RDBMS + Caching setup](#where-are-the-bottlenecks-in-our-rdbms--caching-setup)
+    - [Scalability Strategies to scale our system](#scalability-strategies-to-scale-our-system)
+- [Complete System Architecture](#complete-system-architecture)
+- [Conclusion](#conclusion)
+
 ## Aim
 The aim of this blog is to design a URL Shortener system which takes
 - A long, original URL as input. And **generate a unique, short alias link which redirects to original URL** when searched with short alias in browser.

@@ -8,6 +8,18 @@ canonical_url: "https://bysiva.vercel.app/blog/react-context.md"
 ---
 
 # React Context
+
+## 📚 Table of Contents
+- [Introduction](#introduction)
+    - [Example](#example)
+- [Context an Alternative to Props](#context-an-alternative-to-props)
+    - [Examples](#example-1)
+    - [Step 1: Create a Context](#step-1-create-the-context)
+    - [Step 2: Provide the Context](#step-2-provide-the-context)
+    - [Step 3: Consume the Context](#step-3-consume-the-context)
+        - [Step 3.a: Consume the Context in Another Component](#step-3a-consume-the-context-in-another-component)
+- [Use Cases](#use-cases-of-context)
+
 ## Introduction
 Usually in React, if you want to pass the information between the components like between the Parent & Children we uses the **Props**
 

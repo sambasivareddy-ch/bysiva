@@ -10,6 +10,14 @@ canonical_url: "https://bysiva.vercel.app/blog/system-design-02"
 # System Design - Load Balancing
 This blog post is the second in a series on system design, where we will explore the concept of load balancing, a critical aspect of designing scalable and efficient systems.
 
+## 📚 Table of Contents
+
+1. [Introduction](#system-design---load-balancing)  
+2. [Definition](#definition)  
+3. [Load Balancing Algorithms](#load-balancing-algorithms)  
+4. [Why Load Balancing was Introduced](#why-load-balancing-was-introduced)  
+5. [Example Use Cases](#example-use-cases)
+
 ## Definition
 Load balancing is the process of distributing incoming network traffic or workloads across multiple servers or resources to ensure no single server bears too much load. 
 **The goal is to:**

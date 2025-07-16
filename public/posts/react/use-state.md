@@ -7,6 +7,18 @@ tags: ["React", "Frontend", "useState"]
 canonical_url: "https://bysiva.vercel.app/blog/react-01"
 ---
 # React Hook: useState
+
+## 📚 Table of Contents
+- [Introduction](#introduction)
+- [Definition](#definition)
+- [More about set function](#more-about-set-function)
+    - [Examples](#examples)
+        - [Example-1](#example---1-primitive-type)
+        - [Example-2](#example---2-passing-function-to-set-function)
+        - [Example-3](#example---3-objects-array)
+- [Things to Remember](#things-to-remember)
+
+
 ## Introduction
 useState() is a react hook that lets you add a state variable to your component, _allows a component to remember it's state/values across the multiple re-renders._
 

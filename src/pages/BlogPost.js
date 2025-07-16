@@ -4,6 +4,8 @@ import ReactMarkdown from "react-markdown";
 import { Link } from "react-router-dom";
 import matter from 'gray-matter';
 import { Buffer } from 'buffer';
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { BarLoader } from "react-spinners";
@@ -99,6 +101,7 @@ const BlogPost = () => {
             </ReactMarkdown> */}
             <ReactMarkdown
                 children={content}
+                rehypePlugins={[rehypeSlug, rehypeAutolinkHeadings]}
                 components={{
                     code({ node, inline, className, children, ...props }) {
                     const match = /language-(\w+)/.exec(className || '');

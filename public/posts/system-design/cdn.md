@@ -10,6 +10,15 @@ canonical_url: "https://bysiva.vercel.app/blog/system-design-04"
 # CDN (Content Delivery Network)
 This blog post is the fourth in a series on system design, where we will explore the concept of Content Delivery Networks (CDNs), a critical aspect of designing scalable and efficient systems.
 
+## 📚 Table of Contents
+
+1. [Introduction](#cdn-content-delivery-network)  
+2. [Definition](#definition)  
+3. [Is a CDN the Same as a Load Balancer?](#is-a-cdn-the-same-as-a-load-balancer)  
+4. [Is a CDN the Same as a Web Server?](#is-a-cdn-the-same-as-a-web-server)  
+5. [How CDNs Work](#how-cdns-work)  
+6. [Benefits of Using a CDN](#benefits-of-using-a-cdn)
+
 ## Definition
 A Content Delivery Network (CDN) is a geograhphically distributed network of proxy servers and data centers that work together to deliver the static content to users based on their geographic location.
 - The static content can be images, videos, scripts, stylesheets etc.
@@ -64,7 +73,7 @@ No, a CDN is not the same as a load balancer, although they both aim to improve 
 -----------------------------------------------------------------------------------------------------------
 ```
 
-`## Benefits of Using a CDN
+## Benefits of Using a CDN
 - **Latency Reduction**: By serving content from the nearest edge server, CDNs significantly reduce the time it takes for content to reach the user, resulting in faster load times and improved user experience.
 - **Scalability**: CDNs can handle large volumes of traffic by distributing the load across multiple edge servers. This allows websites to scale easily during traffic spikes without overwhelming the origin server.
 - **Bandwidth Savings**: CDNs can reduce bandwidth costs by caching and serving static content, minimizing the amount of data that needs to be transferred from the origin server.
