@@ -4,7 +4,7 @@ description: "Learn about the React Context and it's Usage"
 author: "Siva"
 date: 2025-07-06
 tags: ["React", "Frontend", "Context"]
-canonical_url: "https://bysiva.vercel.app/blog/react-context.md"
+canonical_url: "https://bysiva.vercel.app/blog/react-context"
 ---
 
 # React Context

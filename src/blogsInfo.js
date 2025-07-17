@@ -1,4 +1,13 @@
 const blogs = [
+    {
+        'id': 'react-03',
+        'slug': 'react-vdom',
+        'title': "React's Virtual DOM",
+        'description': 'A blog to explain about virtual DOM in React',
+        'date': '2025-07-10',
+        'domains': ['react'],
+        'filename': 'react/react-vdom.md',
+    },
      {
         'id': 'cp-24',
         'slug': 'cp-24',
@@ -46,7 +55,7 @@ const blogs = [
     },
      {
         'id': 'react-02',
-        'slug': 'react-02',
+        'slug': 'react-use-state',
         'title': 'React Hook: useState',
         'description': 'A blog to explain about useState hook in React',
         'date': '2025-07-10',
@@ -118,7 +127,7 @@ const blogs = [
     },
     {
         'id': 'react-01',
-        'slug': 'react-01',
+        'slug': 'react-context',
         'title': 'React Context: createContext & useContext',
         'description': 'A blog to explain about Context, createContext & useContext Hook in React',
         'date': '2025-07-05',
