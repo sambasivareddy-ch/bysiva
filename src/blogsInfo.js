@@ -13,7 +13,7 @@ const blogs = [
         'slug': 'react-vdom',
         'title': "React's Virtual DOM",
         'description': 'A blog to explain about virtual DOM in React',
-        'date': '2025-07-10',
+        'date': '2025-07-17',
         'domains': ['react'],
         'filename': 'react/react-vdom.md',
     },
