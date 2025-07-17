@@ -1,5 +1,14 @@
 const blogs = [
     {
+        'id': 'cp-25',
+        'slug': 'cp-25',
+        'title': 'Remove Nth node from the back of the LL',
+        'description': 'Competitive Programming Problem: Given the Linkedlist and n-th value, remove the n-th element from the end of LL',
+        'date': '2025-07-17',
+        'domains': ['competitive-programming', 'linked-list', 'two-pointers'],
+        'filename': 'competetive-programming/cp-25.md',
+    },
+    {
         'id': 'react-03',
         'slug': 'react-vdom',
         'title': "React's Virtual DOM",
