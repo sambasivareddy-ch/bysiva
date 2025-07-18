@@ -6,6 +6,7 @@ import matter from 'gray-matter';
 import { Buffer } from 'buffer';
 import rehypeSlug from 'rehype-slug';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import { Helmet } from "react-helmet";
 
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { BarLoader } from "react-spinners";
@@ -22,6 +23,7 @@ window.Buffer = Buffer;
 const BlogPost = () => {
     const { slug } = useParams();
     const [content, setContent] = useState("");
+    const [meta, setMeta] = useState();
     const [url, setUrl] = useState("");
     const [tags, setTags] = useState([]);
 
@@ -52,6 +54,7 @@ const BlogPost = () => {
         .then((text) => {
             const { content: parsedContent, data: meta } = matter(text);
             setContent(parsedContent);
+            setMeta(meta);
 
             // Optional: update metadata dynamically (e.g., document.title, meta tags)
             document.title = meta.title || "Blog Post";
@@ -75,6 +78,17 @@ const BlogPost = () => {
     
     return (
         <div className={styles["blog-post-wrapper"]}>
+            <Helmet>
+                <title>{meta.title}</title>
+                <meta name="description" content={meta.description} />
+
+                {/* Open Graph */}
+                <meta property="og:title" content={meta.title} />
+                <meta property="og:description" content={meta.description} />
+                <meta property="og:url" content={meta.canonical_url} />
+                <meta property="og:type" content="article" />
+                <meta property="article:author" content={meta.author} />
+            </Helmet>
             <Link to={'/'}>
                 <ArrowBackIcon/>
             </Link>
@@ -96,9 +110,6 @@ const BlogPost = () => {
                     </span>
                 ))} 
             </div>
-            {/* <ReactMarkdown>
-                {content}
-            </ReactMarkdown> */}
             <ReactMarkdown
                 children={content}
                 rehypePlugins={[rehypeSlug, rehypeAutolinkHeadings]}

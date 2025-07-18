@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 
 // import CalendarHeatmap from 'react-calendar-heatmap';
-import 'react-calendar-heatmap/dist/styles.css';
+// import 'react-calendar-heatmap/dist/styles.css';
 import ClearIcon from '@mui/icons-material/Clear';
 import BlogComponent from "../components/BlogComponent";
 import styles from "../styles/blog.module.css";
